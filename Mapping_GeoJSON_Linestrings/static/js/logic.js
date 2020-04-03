@@ -35,6 +35,8 @@ let map = L.map('mapid', {
 L.control.layers(baseMaps).addTo(map);
     let airportData = "https://raw.githubusercontent.com/D-u-s-t-i-n/Module13_Mapping_Earthquakes/master/majorAirports.json";
     let torontoData = "https://raw.githubusercontent.com/D-u-s-t-i-n/Module13_Mapping_Earthquakes/master/torontoRoutes.json";
+    // Accessing the Toronto neighborhoods GeoJSON URL.
+  let torontoHoods = "https://raw.githubusercontent.com/D-u-s-t-i-n/Module13_Mapping_Earthquakes/master/torontoNeighborhoods.json";
 
     // Grabbing our GeoJSON data.
 // d3.json(airportData).then(function(data) {
@@ -49,7 +51,7 @@ let myStyle = {
 	weight: 2
 }
 
-d3.json(torontoData).then(function(data) {
+d3.json(torontoHoods).then(function(data) {
   console.log(data);
 // Creating a GeoJSON layer with the retrieved data.
 L.geoJson(data, {
@@ -58,3 +60,9 @@ L.geoJson(data, {
 }
 }).addTo(map);
 });
+
+// d3.json(airportData).then(function(data) {
+//   console.log(data);
+// // Creating a GeoJSON layer with the retrieved data.
+// L.geoJson(data).addTo(map);
+// });
