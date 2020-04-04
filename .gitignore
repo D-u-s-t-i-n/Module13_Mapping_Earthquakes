@@ -1,2 +1,6 @@
 # Ignore the config.js file
 config.js
+majorAirports.json
+torontoNeighborhoods.json
+torontoRoutes.json
+PB2002_boundaries.json
